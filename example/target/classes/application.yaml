@@ -1,0 +1,29 @@
+# ==========================================
+# ===           DEFAULT VALUES           ===
+# ==========================================
+
+server:
+  profiles: development
+spring:
+datasource:
+    dsdvdrental:
+      jdbcUrl: jdbc:postgresql://localhost:5432/dvdrental?autoReconnect=true
+      driverClassName: org.postgresql.Driver
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      username: postgres
+      password: postgres
+      tomcat:
+        maxActive: 377
+        maxWait: 30000
+        maxIdle: 233
+        minIdle: 89
+        timeBetweenEvictionRunsMillis: 34000
+        minEvictableIdleTimeMillis: 55000
+        initialSize: 34
+        testOnBorrow: true
+        validationQuery: SELECT 1
+        validationInterval: 34000
+        removeAbandoned: true
+        removeAbandonedTimeout: 55
+
+
