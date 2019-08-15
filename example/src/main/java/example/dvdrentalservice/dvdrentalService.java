@@ -18,7 +18,8 @@ public class dvdrentalService {
     @Qualifier("mariaJdbcTemplate")
     private JdbcTemplate mariaJdbcTemplate;
 
-    public List<Map<String, Object>> getdata(){
+    public List<Map<String, Object>> getdata()
+    {
         try{
             List<Map<String, Object>> data;
             String query =DvdrentalRepository.display1;
@@ -26,10 +27,14 @@ public class dvdrentalService {
             System.out.println(data);
             return data;
         }
-        catch(Exception e){
+        catch(Exception e)
+        {
             System.out.println("Exception");
             throw e;
         }
     }
 
+   /* public void gdata()
+    {
+    }*/
 }

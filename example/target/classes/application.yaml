@@ -5,7 +5,7 @@
 server:
   profiles: development
 spring:
-datasource:
+  datasource:
     dsdvdrental:
       jdbcUrl: jdbc:postgresql://localhost:5432/dvdrental?autoReconnect=true
       driverClassName: org.postgresql.Driver
