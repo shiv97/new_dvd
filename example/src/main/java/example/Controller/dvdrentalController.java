@@ -1,12 +1,9 @@
 package example.Controller;
 
-
 import example.dvdrentalservice.dvdrentalService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -43,6 +40,12 @@ public class dvdrentalController
         dat = DvdrentalService.getdata();
         System.out.println(dat);
         return dat;
+    }
+    @PutMapping("/{id}")
+    public @ResponseBody
+    ResponseEntity<List<Map<String, Object>>> putdat()
+    {
+        return putdat();
     }
     /*@PostMapping("article")
     public ResponseEntity<Void> addArticle(@RequestBody ArticleInfo articleInfo, UriComponentsBuilder builder) {
